@@ -1,0 +1,30 @@
+services:
+  av-stack:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    network_mode: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RCUTILS_LOGGING_SEVERITY_THRESHOLD=INFO
+    volumes:
+      - /tmp/av_bags:/tmp/av_bags     # rosbag output
+      - /dev/can0:/dev/can0           # CAN interface (optional)
+    devices:
+      - /dev/dri                      # GPU passthrough for RViz (optional)
+    command: >
+      ros2 launch av_bringup full_stack.launch.py
+      use_sim_time:=false
+      log_level:=info
+
+  rviz:
+    image: osrf/ros:humble-desktop
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    command: rviz2
+    profiles:
+      - gui

@@ -1,0 +1,7 @@
+std_msgs/Header header
+float32 steering_tire_angle
+float32 longitudinal_velocity
+float32 lateral_velocity
+float32 gear_shift
+float32 hand_brake
+bool emergency_stop

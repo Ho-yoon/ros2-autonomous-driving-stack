@@ -1,0 +1,7 @@
+lidar_preprocessor:
+  ros__parameters:
+    voxel_leaf_size: 0.1
+    min_range: 0.5
+    max_range: 100.0
+    input_topic: "/sensing/lidar_raw"
+    output_topic: "/sensing/lidar_points"

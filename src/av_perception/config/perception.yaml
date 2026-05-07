@@ -1,0 +1,10 @@
+object_detector:
+  ros__parameters:
+    cluster_tolerance: 0.5
+    min_cluster_size: 10
+    max_cluster_size: 2000
+
+tracking:
+  ros__parameters:
+    max_missed_frames: 5
+    association_distance: 3.0

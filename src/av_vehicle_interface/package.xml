@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>av_vehicle_interface</name>
+  <version>0.1.0</version>
+  <description>CAN gateway and vehicle command adaptation</description>
+  <maintainer email="hoho121129@gmail.com">Ho-yoon</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>av_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
