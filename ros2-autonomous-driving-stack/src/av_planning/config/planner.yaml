@@ -1,0 +1,14 @@
+global_planner:
+  ros__parameters:
+    waypoint_spacing: 1.0
+
+behavior_planner:
+  ros__parameters:
+    stop_distance: 5.0
+    obstacle_ttc_threshold: 3.0
+
+trajectory_generator:
+  ros__parameters:
+    target_speed: 8.0
+    horizon_length: 50.0
+    point_spacing: 1.0

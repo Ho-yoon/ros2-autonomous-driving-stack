@@ -1,0 +1,5 @@
+av_msgs/DetectedObject detection
+uint32 track_id
+uint32 age
+float32 existence_probability
+geometry_msgs/Twist predicted_velocity
